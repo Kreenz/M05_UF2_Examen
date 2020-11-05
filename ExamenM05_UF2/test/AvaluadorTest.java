@@ -137,7 +137,7 @@ public class AvaluadorTest {
                new Estudiant("Jorge Hernandez", 8.0, 8.0, 8.0),
                new Estudiant("Alex Casanovas", 7.0, 7.0, 7.0),
                new Estudiant("Josemi Gepardo", 7.0, 7.0, 7.0),
-               new Estudiant("Jorge Hernandez", 10.0, 10.0, 10.0), //Respuesta a los de arriba
+               new Estudiant("Jorge Hernandez", 8.0, 8.0, 8.0), //Respuesta a los de arriba
                new Estudiant("Alex Casado", 3.0, 5.0 ,5.0),
                0.0,
                4.33
@@ -284,21 +284,21 @@ public class AvaluadorTest {
         estudiants1[3] = estudiant4;
         estudiants1[4] = estudiant5;
         
-        assertEquals(esutidantBo.getNombre(), avaluador.millorEstudiantPerNotaMitjana(estudiants1).getNombre());
+        assertEquals(esutidantBo, avaluador.millorEstudiantPerNotaMitjana(estudiants1));
     }
     
     //Normal
     @Test
     public void testMillorEstudiant2() throws Exception {
-        estudiant = new Estudiant("Juan Martinez", 10.0, 10.0, 10.0);
+        estudiant = new Estudiant("Juan Martinez", 5.0, 5.0, 5.0);
         estudiants[0] = new Estudiant("Juan Martinez", 5.0, 5.0, 5.0);
-        estudiants[1] = new Estudiant("Pepe Rodrigez", 5.0, 5.0, 5.0);
-        estudiants[2] = new Estudiant("Jorge Javier", 5.0, 5.0, 5.0);
-        estudiants[3] = new Estudiant("Anna Martinez", 5.0, 5.0, 5.0);
-        estudiants[4] = new Estudiant("Alex Casado", 5.0, 5.0, 5.0);
-        estudiants[5] = new Estudiant("Rodrigo Jimenez", 5.0, 5.0, 5.0);
+        estudiants[1] = new Estudiant("Pepe Rodrigez", 3.0, 3.0, 3.0);
+        estudiants[2] = new Estudiant("Jorge Javier", 3.0, 3.0, 3.0);
+        estudiants[3] = new Estudiant("Anna Martinez", 3.0, 3.0, 3.0);
+        estudiants[4] = new Estudiant("Alex Casado", 3.0, 3.0, 3.0);
+        estudiants[5] = new Estudiant("Rodrigo Jimenez", 3.0, 3.0, 3.0);
 
-        assertEquals(estudiant.getNombre(), avaluador.millorEstudiantPerNotaMitjana(estudiants).getNombre());
+        assertEquals(estudiant, avaluador.millorEstudiantPerNotaMitjana(estudiants));
     }
     
     @Test
